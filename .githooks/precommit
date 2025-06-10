@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+dotnet format --verify-no-changes src
+
+if [ $? -ne 0 ]; then
+    echo "dotnet format reported issues. Please fix them before committing."
+    exit 1
+fi

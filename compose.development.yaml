@@ -1,0 +1,10 @@
+---
+services:
+  cli:
+    image: ghcr.io/jmzagorski/dev/dotnet:9.0
+    tty: true
+    working_dir: /home/dotnet/azreposcli
+    volumes:
+      - .:/home/dotnet/azreposcli
+    environment:
+      TERM: "${TERM}"

@@ -1,0 +1,20 @@
+---
+services:
+  cli:
+    extends:
+      file: ./compose.development.yaml
+      service: cli
+    volumes:
+      - ${HOME}/.vim:/home/dotnet/.vim
+      - ${HOME}/.bashrc:/home/dotnet/.bashrc
+      - ${HOME}/.profile:/home/dotnet/.profile
+      - ${HOME}/.bash_profile:/home/dotnet/.bash_profile
+      - ${HOME}/.bash_aliases:/home/dotnet/.bash_aliases
+      - ${HOME}/.nuget:/home/dotnet/.nuget
+      - ${HOME}/.gitconfig:/home/dotnet/.gitconfig
+      - ${HOME}/.gitconfig-personal:/home/dotnet/.gitconfig-personal
+      - ${HOME}/.git-templates:/home/dotnet/.git-templates
+      - ${HOME}/.cache/git:/home/dotnet/.cache/git
+    environment:
+      VISUAL: "vim"
+      EDITOR: "vim"

@@ -1,0 +1,6 @@
+# Do not convert line endings, similar to core.autocrlf=false
+* -text
+
+*.cs diff=csharp
+*.sln text eol=crlf
+*.csproj text eol=crlf
